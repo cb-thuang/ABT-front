@@ -28,6 +28,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN rm /etc/nginx/sites-available/default
 RUN rm /etc/nginx/sites-enabled/default
 COPY config/nginx/sites-enabled/ /etc/nginx/sites-enabled/
+COPY config/nginx/htpasswd /etc/nginx/htpasswd
 
 # copy src code
 COPY . /app/ABT-front
